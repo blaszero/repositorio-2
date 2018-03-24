@@ -1,0 +1,197 @@
+/* efecto slidein */
+@-webkit-keyframes slidein{ /* nombre de la animacion*/
+    0%{
+      margin-top: 150%;
+    }
+    60%{
+      margin-top: -5%;
+    }
+    100%{
+      margin-top: 0%;
+    }
+}
+*{
+  margin: 0;
+}
+body{
+  background: #02010a;
+  color: white;
+  font-size: 16px;
+  font-size: 14pt;
+  font-family: "Dancing Script";
+  animation: slidein 1s;
+}
+#contenido{
+  width: 900px;
+  margin: 0 auto;
+  min-height: 200px;
+}
+header{
+  background: #5b7989;
+  border-radius: 10px 10px 0 0;
+  padding: 15px 0px;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+
+}
+#titulo_de_cabesera{
+  text-shadow: 2px 2px #02010a;
+  width: 70%;
+  text-indent:15px;
+}
+#menu_de_cabesera{
+  width: 30%;
+  font-size: 18pt;
+}
+
+#menu_de_cabesera a, #menu_de_cabesera a:hover{
+  padding: 5px 10px;
+  color: #fff;
+}
+
+#menu_de_cabesera a + a::before{
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu_de_cabesera .actual{
+  text-decoration: none;
+}
+#principal{
+  padding: 20px;
+  background: #82c3a6;
+}
+.imagen_principal{
+  box-shadow: 2px 2px #02010a, 0px 2px #02010a;
+}
+img{
+  width: 100%;
+
+}
+
+/*di forma a la segunda seccion */
+#seccion_secundaria{
+  color: black;
+  background: #d5c75f;
+  padding: 20px 0px;
+  min-height: 100px;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+}
+/*di forma a las cajas de las imagenes secundarias  */
+.caja_secundaria{
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+.caja_paisaje{
+  width: 33.3%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px 15px;
+}
+.caja_paisaje >img{
+  height: 200px;
+}
+/*efectos de las imagenes  */
+#imagen1{
+  filter: blur(10px);
+}
+#imagen2,#imagen4,#imagen6{
+  filter: grayscale(100%);
+}
+#imagen3{
+  filter: sepia(90%);
+}
+
+/* puse formato a las imagenes */
+.paisaje{
+  box-shadow: 2px 2px #02010a, 0px 2px #02010a;
+  border: 1px solid black;
+}
+/* animacion de paisaje paso 1*/
+#animacion_paisaje{
+  transition: transform 2s;
+  transition: box-shadow 2s;
+  transition: border 2s;
+  transition: transform:rotate, 2s;
+  transition: box-shadow, 2s;
+  transition: border, 2s;
+}
+
+/* animacion de paisaje paso2 */
+#animacion_paisaje:hover{
+  transform: rotate(10deg);
+  box-shadow: 3px 3px #82c3a6, 0px 1px #82c3a6;
+  border: 2px solid black;
+}
+
+/* animacio de retrato paso 1 */
+#animacion_retrato{
+  transition: transform 2s;
+  transition: box-shadow 2s;
+  transition: border 2s;
+  transition: transform:translate, 2s;
+  transition: box-shadow, 2s;
+  transition: border, 2s;
+}
+
+#animacion_retrato:hover{
+  transform: translate(20px,-5px);
+  box-shadow: 3px 3px #82c3a6, 0px 1px #82c3a6;
+  border: 2px solid black;
+}
+/*-------  */
+.retrato{
+  box-shadow: 2px 2px #02010a, 0px 2px #02010a;
+  border: 1px solid black;
+}
+
+footer{
+  background: #C6d5c5;
+  display: flex;
+  display:-webkit-flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  padding: 15px 0px;
+  color: black;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.caja_columna{
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0px 15px;
+}
+
+.icono{
+  width: 15%;
+}
+
+@media (max-width:900px){
+  #contenido{
+    width: 100%;
+    margin: 0 auto;
+  }
+#menu_de_cabesera,#titulo_de_cabesera{
+  width: 100%;
+  text-align: center;
+  }
+  .caja_secundaria{
+    width: 100%;
+  }
+  .caja_columna{
+    width: 100%;
+  }
+  .icono{
+    width: 100%;
+  }
+  .caja_paisaje{
+    width: 100%;
+  }
+}
